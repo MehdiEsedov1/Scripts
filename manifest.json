@@ -1,0 +1,18 @@
+{
+  "name": "URL Blocker",
+  "version": "1.0.0",
+  "description": "This Chrome extension prevents users from accessing URLs they have entered into the input field. Even if the browser is closed, the URLs are stored and access is blocked upon re-entry, ensuring restricted access to specified sites.",
+  "manifest_version": 3,
+  "author": "Mehdi Asadov",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "URL Blocker"
+  },
+  "permissions": ["tabs", "activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["app.js"]
+    }
+  ]
+}
