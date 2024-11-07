@@ -94,7 +94,3 @@ function handleClick(e) {
 
   location.reload();
 }
-
-chrome.storage.local.get(null, function (items) {
-  console.log(items);
-});
